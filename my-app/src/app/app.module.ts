@@ -7,12 +7,14 @@ import { UserListService } from "./user-list.service";
 import { HttpClientModule } from "@angular/common/http";
 import { AddUserFormComponent } from './add-user-form/add-user-form.component';
 import { FormsModule } from '@angular/forms';
+import { UpdateUserComponent } from './update-user/update-user.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     routingComponents,
-    AddUserFormComponent
+    AddUserFormComponent,
+    UpdateUserComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { UserListService } from "../user-list.service";
 
 
@@ -10,7 +11,7 @@ import { UserListService } from "../user-list.service";
 export class UserListComponent {
   public userList:any[] = [];
 
-  constructor(private _userlistService: UserListService){
+  constructor(private _userlistService: UserListService, private router: Router){
 
   }
 
@@ -26,6 +27,10 @@ export class UserListComponent {
   onDelete(userId: number){
     this._userlistService.deleteUser(userId).subscribe();
     this.allUsers();
-
   }
+
+  onUpdate(userId: number){
+    this.router.navigate(['/update-user', userId]);
+  }
+
 }
