@@ -1,0 +1,41 @@
+<div class="container" align="center">
+  <h1> User Registraion</h1>
+
+  <form  #userRegister="ngForm" (ngSubmit)="submit(userRegister.value)">
+    <!-- category -->
+    <div class="form-group">
+      <label for="category">Category</label>
+      <br>
+      <input type="text" required  name="category" id="" class="form-control" ngModel>
+    </div>
+    <pre></pre>
+
+    <!-- app -->
+    <div class="form-group">
+      <label for="app">App</label>
+      <br>
+      <input type="text" required  name="app" id="" class="form-control" ngModel>
+    </div>
+    <pre></pre>
+
+    <!-- userName -->
+    <div class="form-group">
+      <label for="userName">Username</label>
+      <br>
+      <input type="text" required  name="userName" id="" class="form-control" ngModel>
+    </div>
+    <pre></pre>
+
+    <!-- encryptedPassword -->
+    <div class="form-group">
+      <label for="encryptedPassword">Password</label>
+      <br>
+      <input type="text" required  name="encryptedPassword" id="" class="form-control" ngModel>
+    </div>
+    <pre></pre>
+
+    <!-- submit -->
+    <button type="submit">Submit</button>
+  </form>
+
+</div>
