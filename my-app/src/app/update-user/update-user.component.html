@@ -1,15 +1,12 @@
-<p>update-user works!</p>
-
-
-<div class="container" align="center">
-  <h1> User Registraion</h1>
+<div class="container">
+  <h1> Change Password</h1>
 
   <form #userUpdate="ngForm" (ngSubmit)="update(userUpdate.value)">
     <!-- category -->
     <div class="form-group">
       <label for="category">Category</label>
       <br>
-      <input type="text" required name="category" id="" class="form-control" [(ngModel)]="user.category">
+      <input type="text" required name="category" id="" class="form-control" [(ngModel)]="user.category" disabled>
     </div>
     <pre></pre>
 
@@ -17,7 +14,7 @@
     <div class="form-group">
       <label for="app">App</label>
       <br>
-      <input type="text" required name="app" id="" class="form-control" [(ngModel)]="user.app">
+      <input type="text" required name="app" id="" class="form-control" [(ngModel)]="user.app" disabled>
     </div>
     <pre></pre>
 
@@ -25,7 +22,7 @@
     <div class="form-group">
       <label for="userName">Username</label>
       <br>
-      <input type="text" required name="userName" id="" class="form-control" [(ngModel)]="user.userName">
+      <input type="text" required name="userName" id="" class="form-control" [(ngModel)]="user.userName" disabled>
     </div>
     <pre></pre>
 
@@ -38,7 +35,8 @@
     <pre></pre>
 
     <!-- submit -->
-    <button type="submit">Update</button>
+    <button type="submit" class="btn btn-primary">Update</button>&nbsp;
+    <button (click)="goBack()" class="btn btn-primary">Back</button>
   </form>
 
 </div>

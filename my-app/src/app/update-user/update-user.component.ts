@@ -30,9 +30,10 @@ export class UpdateUserComponent {
 
     console.log(this.val);
 
+    //data of the selected user
     this._userlistService.getUpdateUser(this.val).subscribe( data => {
 
-      //data of the selected user
+      //decoding password
       data.encryptedPassword = atob(data.encryptedPassword);
       this.user = data;
 
@@ -43,12 +44,16 @@ export class UpdateUserComponent {
 
   update(data: any){
     this._userlistService.updateUser(this.user).subscribe(data => {
+      this.allUsers();
+
 
     });
+      //redirect
+      this.router.navigate(['all-users']);
 
-    this.allUsers();
+  }
 
-    //redirect
+  goBack(){
     this.router.navigate(['all-users']);
   }
 

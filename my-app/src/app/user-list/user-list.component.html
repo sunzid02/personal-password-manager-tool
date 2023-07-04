@@ -7,31 +7,39 @@
 
     <thead>
       <tr>
-        <th>Id</th>
-        <th>Category</th>
-        <th>App</th>
-        <th>Username</th>
-        <th>Password</th>
-        <th>Edit</th>
-        <th>Delete</th>
+        <th scope="col">Sl.</th>
+        <th scope="col">Category</th>
+        <th scope="col">App</th>
+        <th scope="col">Username</th>
+        <th scope="col">Password</th>
+        <th scope="col">Edit</th>
+        <th scope="col">Delete</th>
       </tr>
     </thead>
-    <tbody>
-      <tr *ngFor="let user of userList">
-        <td>{{ user.id }}</td>
+    <tbody *ngIf="userList.length > 0">
+      <tr *ngFor="let user of userList; index as i">
+        <th scope="row">{{ i + 1 }}</th>
+        <!-- <td>{{ user.id }}</td> -->
         <td>{{ user.category }}</td>
         <td>{{ user.app }}</td>
         <td>{{ user.userName }}</td>
         <td>{{ user.encryptedPassword }}</td>
         <td>
-          <button (click)="onUpdate(user.id)">Edit</button>&nbsp;&nbsp;
+          <button class="btn btn-success" (click)="onUpdate(user.id)">Edit</button>
         </td>
         <td>
-          <button (click)="onDelete(user.id)">
+          <button class="btn btn-danger" (click)="onDelete(user.id)">
             Delete
           </button>
         </td>
       </tr>
     </tbody>
+
   </table>
+
+  <!-- if no user is available then this will show -->
+  <div *ngIf="userList.length == 0"> no data </div>
+
+
 </div>
+

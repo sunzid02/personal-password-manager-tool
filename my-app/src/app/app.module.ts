@@ -8,19 +8,23 @@ import { HttpClientModule } from "@angular/common/http";
 import { AddUserFormComponent } from './add-user-form/add-user-form.component';
 import { FormsModule } from '@angular/forms';
 import { UpdateUserComponent } from './update-user/update-user.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     routingComponents,
     AddUserFormComponent,
-    UpdateUserComponent
+    UpdateUserComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgbModule
   ],
   providers: [ UserListService ],
   bootstrap: [AppComponent]
