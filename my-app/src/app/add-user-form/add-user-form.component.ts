@@ -24,11 +24,7 @@ export class AddUserFormComponent {
     this._userlistService.createUser(data).subscribe( (result: any) => {
       console.log(result);
       console.log(atob(result.encryptedPassword));
-
-
     });
-
-
   }
 
 }

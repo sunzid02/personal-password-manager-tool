@@ -14,8 +14,18 @@ export class UserListComponent {
 
   }
 
-  ngOnInit(){
-     this._userlistService.getUserList().subscribe( data => this.userList = data);
+  allUsers(){
+    return this._userlistService.getUserList().subscribe( data => this.userList = data);
+
   }
 
+  ngOnInit(){
+     this.allUsers();
+  }
+
+  onDelete(userId: number){
+    this._userlistService.deleteUser(userId).subscribe();
+    this.allUsers();
+
+  }
 }
