@@ -1,0 +1,9 @@
+<h2>User list</h2>
+
+<ul *ngFor="let user of userList">
+  <li>Id: {{ user.id }}</li>
+  <li>Category: {{ user.category }}</li>
+  <li>App: {{ user.app }}</li>
+  <li>Name: {{ user.userName }}</li>
+  <li>Password: {{ user.encryptedPassword }}</li>
+</ul>

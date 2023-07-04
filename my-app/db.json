@@ -6,6 +6,24 @@
         "app":"outlook",
         "userName":"testuser@mytest.com",
         "encryptedPassword":"TXlQYXNzd29yZEAxMjM="
+      },
+      { "id":2,
+        "category":"work2",
+        "app":"outlook",
+        "userName":"testuser@mytest.com",
+        "encryptedPassword":"TXlQYXNzd29yZEAxMjM="
+      },
+      { "id":3,
+        "category":"work3",
+        "app":"outlook",
+        "userName":"testuser@mytest.com",
+        "encryptedPassword":"TXlQYXNzd29yZEAxMjM="
+      },
+      { "id":4,
+        "category":"work3",
+        "app":"outlook",
+        "userName":"testuser@mytest.com",
+        "encryptedPassword":"TXlQYXNzd29yZEAxMjM="
       }
   ]
 }
