@@ -37,8 +37,6 @@ export class UserListService {
   deleteUser(id: number): Observable<IUsers>{
 
      let del = this.http.delete<IUsers>(this._url+ '/' +id, this.httpOptions);
-     alert('User deleted.....');
-
      return del;
   }
 

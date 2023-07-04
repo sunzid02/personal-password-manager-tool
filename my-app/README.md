@@ -14,4 +14,5 @@ Then run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The 
 
 ## Start
 
-Run `ng serve` to run the project.
+If everything is successful project will be like this.
+link: 

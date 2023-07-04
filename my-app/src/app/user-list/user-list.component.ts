@@ -26,7 +26,9 @@ export class UserListComponent {
 
   onDelete(userId: number){
     this._userlistService.deleteUser(userId).subscribe();
+    alert('deleted...');
     this.allUsers();
+    this.router.navigate(['/all-users']);
   }
 
   onUpdate(userId: number){
