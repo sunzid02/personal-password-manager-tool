@@ -15,4 +15,4 @@ Then run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The 
 ## Start
 
 If everything is successful project will be like this.
-link: 
+demolink: https://shorturl.at/muwHK
